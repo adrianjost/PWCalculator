@@ -25,9 +25,12 @@ export default {
 body{
     margin: 0;
     padding: 0;
-    background-color: #333;
+    background-color: #777;
 }
 .calculator-wrapper{
   height: 100vh;
+  max-width: 60vh;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px rgba(0,0,0,.3);
 }
 </style>
