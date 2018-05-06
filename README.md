@@ -1,6 +1,6 @@
-# calculator
+# BasicCalc - an super simple (not so powerfull) calcluator progressive web app
 
-> a calculator webapp
+ ![BasicCalc Screenshot](https://github.com/adrianjost/Calculator-PWA/blob/master/screenshot.jpg)
 
 ## Build Setup
 
