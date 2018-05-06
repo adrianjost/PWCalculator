@@ -1,4 +1,4 @@
-# BasicCalc - an super simple (not so powerfull) calcluator progressive web app
+# BasicCalc - an super simple (not so powerful) calculator progressive web app
 
  ![BasicCalc Screenshot](https://github.com/adrianjost/Calculator-PWA/blob/master/screenshot.jpg)
 
