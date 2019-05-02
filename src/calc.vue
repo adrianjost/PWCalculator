@@ -39,10 +39,10 @@ export default {
 				case "=":
 					try {
 						const result = stringMath(this.display.main);
-						this.display.main = this.round(result, 10).toString();
 						this.display.history.push(
 							`${this.display.main} = ${this.round(result, 5)}`
 						);
+						this.display.main = this.round(result, 10).toString();
 					} catch (error) {
 						alert(error);
 					}
