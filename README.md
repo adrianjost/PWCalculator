@@ -1,12 +1,12 @@
 # BasicCalc - The super simple calculator PWA for mobile devices
 
-[![Build Status](https://travis-ci.com/adrianjost/Calculator-PWA.svg?branch=master)](https://travis-ci.com/adrianjost/Calculator-PWA)
+[![Build Status](https://travis-ci.com/adrianjost/Calculator-PWA.svg?branch=master)](https://travis-ci.com/adrianjost/Calculator-PWA) [![Greenkeeper badge](https://badges.greenkeeper.io/adrianjost/Calculator-PWA.svg)](https://greenkeeper.io/)
 
-[![BasicCalc Screenshot](./screenshot.jpg)](https://calculator.adrianjost.dev) [![Greenkeeper badge](https://badges.greenkeeper.io/adrianjost/Calculator-PWA.svg)](https://greenkeeper.io/)
+[![BasicCalc Screenshot](./screenshot.jpg)](https://calculator.adrianjost.dev)
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
