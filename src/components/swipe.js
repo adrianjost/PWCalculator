@@ -49,13 +49,13 @@ export default {
       swipedetect(el, callback){
             this.touchsurface = el,
             this.handleswipe = callback || function(swipedir){}
-          
+
             this.touchsurface.addEventListener('touchstart', this.touchstart, false)
-          
+
             this.touchsurface.addEventListener('touchmove', function(e){
                 //e.preventDefault() // prevent scrolling when inside DIV
             }, false)
-          
+
             this.touchsurface.addEventListener('touchend', this.touchend, false)
         }
     }

@@ -8,6 +8,7 @@
 <script>
 import Display from './components/display';
 import Keypad from './components/input-basic';
+import stringMath from "string-math";
 
 export default {
   name: 'calculator',
@@ -21,9 +22,11 @@ export default {
     }
   },
   methods: {
+    round(number, digits){
+      return Math.round(number * Math.pow(10, digits)) / Math.pow(10, digits)
+    },
     keypress(key) {
       if(key === "C"){
-        this.display.history.push(this.display.main);
         this.display.main = "";
         if(this.display.history[this.display.history.length-1] == ""){
           this.display.history = [];
@@ -31,8 +34,8 @@ export default {
         return;
       }
       if(key === "="){
-        const result = Math.round(eval(this.display.main)*1000000000) / 1000000000;
-        this.display.history.push(`${this.display.main} = ${Math.round(result * 10000) / 10000}`);
+        const result = this.round(stringMath(this.display.main), 10);
+        this.display.history.push(`${this.display.main} = ${this.round(result, 5)}`);
         this.display.main = result.toString();
         return;
       }
@@ -46,7 +49,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .calculator{
   height: 100%;
   @media screen and (min-width: 800px){

@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="button-wrapper">
-            <button v-for="button in buttonarray"
+            <button v-for="button in buttonarray" :key="button"
                 @click="emitKey(button)">
                 {{button}}
             </button>

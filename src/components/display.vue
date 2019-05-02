@@ -2,7 +2,7 @@
     <div class="display-wrapper">
       <div class="history-wrapper">
         <div class="history">
-          <div class="row" v-for="entry in value.history.slice().reverse()">
+          <div class="row" v-for="(entry, index) in value.history.slice().reverse()" :key="index">
             {{entry}}
           </div>
         </div>
@@ -24,7 +24,7 @@ export default {
       default: () => ({main:"", small:[]}),
     },
   },
-  mounted(){ 
+  mounted(){
     const el = document.querySelector('input.main');
     this.swipedetect(el, this.swipeHandler);
   },
