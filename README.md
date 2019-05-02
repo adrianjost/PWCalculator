@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/adrianjost/Calculator-PWA.svg?branch=master)](https://travis-ci.com/adrianjost/Calculator-PWA)
 
-[![BasicCalc Screenshot](./screenshot.jpg)](https://calculator.adrianjost.dev)
+[![BasicCalc Screenshot](./screenshot.jpg)](https://calculator.adrianjost.dev) [![Greenkeeper badge](https://badges.greenkeeper.io/adrianjost/Calculator-PWA.svg)](https://greenkeeper.io/)
 
 ## Build Setup
 
