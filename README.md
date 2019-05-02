@@ -1,6 +1,8 @@
 # BasicCalc - The super simple calculator PWA for mobile devices
 
- ![BasicCalc Screenshot](https://github.com/adrianjost/Calculator-PWA/blob/master/screenshot.jpg)
+[![Build Status](https://travis-ci.com/adrianjost/Calculator-PWA.svg?branch=master)](https://travis-ci.com/adrianjost/Calculator-PWA)
+
+[![BasicCalc Screenshot](./screenshot.jpg)](https://calculator.adrianjost.dev)
 
 ## Build Setup
 
