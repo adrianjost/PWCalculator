@@ -1,44 +1,53 @@
+# GENERATED CONTENT
+# remove repo from adrianjost/.github/synced/workflows/generator.js before editing
 pull_request_rules:
-  - name: automatic merge for Greenkeeper pull requests on master
+  - name: label PRs with conflicts
     conditions:
-      - author=greenkeeper[bot]
-      - label~=greenkeeper
-      - status-success~=Travis CI
-      - status-success~=WIP
+      - conflict
+    actions:
+      label:
+        add:
+          - has conflicts
+  - name: remove has conflicts label if conflicts got resolved
+    conditions:
+      - label~=has conflicts
+      - '-conflict'
+    actions:
+      label:
+        remove:
+          - has conflicts
+  - name: let @adrianjost recreate dependabot PRs with conflicts
+    conditions:
+      - 'author~=dependabot(-preview)?\[bot\]'
+      - conflict
+    actions:
+      comment:
+        message: Someone with write access should tell dependabot to recreate this PR.
+  - name: auto merge passing Dependabot pull requests
+    conditions:
+      - 'author~=dependabot(-preview)?\[bot\]'
     actions:
       merge:
         method: squash
-        strict: true
-  - name: automatic merge for Dependabot pull requests on master
+        strict: smart
+  - name: auto merge when ready to merge label is set
     conditions:
-      - author=dependabot[bot]
-      - label~=dependencies
-      - status-success~=Travis CI
-      - status-success~=WIP
-    actions:
-      merge:
-        method: squash
-        strict: true
-  - name: automatic merge on CI success and review
-    conditions:
-      - label~=merge pull
-      - status-success~=Travis CI
-      - status-success~=WIP
+      - label=ready to merge
     actions:
       merge:
         method: merge
-        strict: true
-  - name: add WIP label when WIP is in title
-    conditions:
-      - title~=WIP
-    actions:
-      comment:
-        message: Please remove WIP from the title. I have set the WIP Label for you instead.
-      label:
-        add:
-          - WIP
-  - name: delete merged branch
+        strict: smart
+  - name: remove ready to merge when merged
     conditions:
       - merged
+      - label=ready to merge
+    actions:
+      label:
+        remove:
+          - ready to merge
+  - name: delete merged branches
+    conditions:
+      - merged
+      - label!=WIP
     actions:
       delete_head_branch: {}
