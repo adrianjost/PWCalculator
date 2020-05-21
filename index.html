@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="author" content="Adrian Jost">
+		<meta name="description" content="A Simple & Fast Calculator PWA"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="manifest" href="manifest.webmanifest" />
 		<title>Calculator</title>
@@ -34,19 +36,19 @@
 			name="msapplication-TileImage"
 			content="src/static/images/icons/icon-144x144.png"
 		/>
-    <meta name="msapplication-TileColor" content="#18587b" />
-    <script>
-      if ('serviceWorker' in navigator) {
-        const x = 'sw.js';
-        navigator.serviceWorker.register(x)
-          .then(function(registration) {
-            console.log('Registration successful, scope is:', registration.scope);
-          })
-          .catch(function(error) {
-            console.log('Service worker registration failed, error:', error);
-          });
-      }
-    </script>
+		<meta name="msapplication-TileColor" content="#18587b" />
+		<script>
+			if ('serviceWorker' in navigator) {
+				const x = 'sw.js';
+				navigator.serviceWorker.register(x)
+					.then(function(registration) {
+						console.log('Registration successful, scope is:', registration.scope);
+					})
+					.catch(function(error) {
+						console.log('Service worker registration failed, error:', error);
+					});
+			}
+		</script>
 	</head>
 	<body>
 		<noscript>
