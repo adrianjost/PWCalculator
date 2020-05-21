@@ -15,6 +15,7 @@
 			type="text"
 			class="main"
 			ref="display"
+			aria-label="Calculation"
 			:value="value.main"
 			@input="emitChange()"
 			@keypress="validateInput"
