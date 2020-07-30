@@ -20,7 +20,7 @@
 	},
 	"devDependencies": {
 		"@vue/component-compiler-utils": "^3.2.0",
-		"autoprefixer": "^9.8.5",
+		"autoprefixer": "^9.8.6",
 		"babel-core": "^6.26.3",
 		"babel-plugin-transform-runtime": "^6.23.0",
 		"babel-preset-env": "^1.7.0",
