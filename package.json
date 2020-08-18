@@ -14,7 +14,7 @@
 		"lint": "run-s lint:fix:*"
 	},
 	"dependencies": {
-		"string-math": "^1.2.1",
+		"string-math": "^1.2.2",
 		"vue": "^2.6.11",
 		"vue-hot-reload-api": "^2.3.4"
 	},
