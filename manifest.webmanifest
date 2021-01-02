@@ -1,6 +1,6 @@
 {
-  "name": "BasicCalc",
-  "short_name": "BasicCalc",
+  "name": "PWCalculator",
+  "short_name": "PWCalculator",
   "theme_color": "#18587b",
   "background_color": "#18587b",
   "display": "standalone",
