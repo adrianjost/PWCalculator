@@ -19,7 +19,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           target_url: https://calculator.adrianjost.dev
-          environment: production
+          environment: Demo
       - run: npm ci
       - run: npm run deploy
         env:
