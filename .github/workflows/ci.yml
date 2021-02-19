@@ -9,6 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: chrnorm/deployment-status@v1.0.0
+        id: deployment
+        name: Create GitHub deployment
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          target_url: https://calculator.adrianjost.dev
       - uses: actions/cache@v2
         with:
           path: ~/.npm
@@ -17,3 +23,19 @@ jobs:
       - run: npm run deploy
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      - name: Update deployment status (success)
+        if: success()
+        uses: chrnorm/deployment-status@v1.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          target_url: https://calculator.adrianjost.dev
+          state: "success"
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+      - name: Update deployment status (failure)
+        if: failure()
+        uses: chrnorm/deployment-status@v1.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          target_url: https://calculator.adrianjost.dev
+          state: "failure"
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
