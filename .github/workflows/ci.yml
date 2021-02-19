@@ -1,0 +1,19 @@
+name: CI
+"on": push
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    needs:
+      - lint
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: '${{ runner.os }}-node-${{ hashFiles(''**/package-lock.json'') }}'
+      - run: npm ci
+      - run: npm run deploy
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

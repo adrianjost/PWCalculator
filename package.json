@@ -25,17 +25,18 @@
 		"babel-plugin-transform-runtime": "^6.23.0",
 		"babel-preset-env": "^1.7.0",
 		"babel-preset-stage-2": "^6.24.1",
+		"firebase-tools": "^9.4.0",
 		"npm-run-all": "^4.1.5",
 		"parcel-bundler": "^1.12.4",
 		"parcel-plugin-sw-cache": "^0.3.1",
-		"parcel-plugin-web-extension": "^1.6.1",
+		"parcel-plugin-web-extension": "^1.3.1",
 		"prettier": "2.2.1",
 		"sass": "^1.32.4",
 		"vue-template-compiler": "^2.6.12"
 	},
 	"engines": {
-		"node": ">= 4.0.0",
-		"npm": ">= 3.0.0"
+		"node": ">= 12",
+		"npm": ">= 7"
 	},
 	"browserslist": [
 		"> 1%",
