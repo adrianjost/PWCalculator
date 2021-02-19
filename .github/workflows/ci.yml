@@ -9,17 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: chrnorm/deployment-status@v1.0.0
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: '${{ runner.os }}-node-${{ hashFiles(''**/package-lock.json'') }}'
+      - uses: chrnorm/deployment-action@v1.0.0
         name: Create GitHub deployment
         id: deployment
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           target_url: https://calculator.adrianjost.dev
           environment: production
-      - uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: '${{ runner.os }}-node-${{ hashFiles(''**/package-lock.json'') }}'
       - run: npm ci
       - run: npm run deploy
         env:
