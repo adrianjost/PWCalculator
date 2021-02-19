@@ -10,11 +10,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: chrnorm/deployment-status@v1.0.0
-        id: deployment_id
         name: Create GitHub deployment
+        id: deployment
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           target_url: https://calculator.adrianjost.dev
+          environment: production
       - uses: actions/cache@v2
         with:
           path: ~/.npm
