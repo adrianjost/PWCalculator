@@ -1,6 +1,6 @@
 # PWCalculator - The super simple calculator PWA for mobile devices
 
-[![Build Status](https://travis-ci.com/adrianjost/Calculator-PWA.svg?branch=master)](https://travis-ci.com/adrianjost/Calculator-PWA) ![CI](https://github.com/adrianjost/Calculator-PWA/workflows/CI/badge.svg) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=adrianjost/Calculator-PWA)](https://dependabot.com) [![Dependency Status](https://david-dm.org/adrianjost/Calculator-PWA.svg)](https://david-dm.org/adrianjost/Calculator-PWA) [![Dependency Status](https://david-dm.org/adrianjost/Calculator-PWA/dev-status.svg)](https://david-dm.org/adrianjost/Calculator-PWA?type=dev)
+[![Build Status](https://travis-ci.com/adrianjost/Calculator-PWA.svg?branch=master)](https://travis-ci.com/adrianjost/Calculator-PWA) ![CI](https://github.com/adrianjost/Calculator-PWA/workflows/CI/badge.svg)
 
 [![PWCalculator Screenshot](./screenshot.jpg)](https://calculator.adrianjost.dev)
 
