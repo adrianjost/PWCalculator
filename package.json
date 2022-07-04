@@ -15,7 +15,7 @@
 	},
 	"dependencies": {
 		"string-math": "^1.2.2",
-		"vue": "^2.7.0",
+		"vue": "^2.7.1",
 		"vue-hot-reload-api": "^2.3.4"
 	},
 	"devDependencies": {
@@ -32,7 +32,7 @@
 		"parcel-plugin-web-extension": "^1.6.1",
 		"prettier": "2.7.1",
 		"sass": "^1.53.0",
-		"vue-template-compiler": "^2.7.0"
+		"vue-template-compiler": "^2.7.1"
 	},
 	"engines": {
 		"node": ">= 12",
