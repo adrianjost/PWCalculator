@@ -31,7 +31,7 @@
 		"parcel-plugin-sw-cache": "^0.3.1",
 		"parcel-plugin-web-extension": "^1.6.1",
 		"prettier": "2.8.4",
-		"sass": "^1.58.0",
+		"sass": "^1.58.1",
 		"vue-template-compiler": "^2.7.14"
 	},
 	"engines": {
